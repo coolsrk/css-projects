@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background-color: rgb(220, 217, 215);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.steps {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px;
+    margin: 0px;
+}
+
+.buttons button {
+    margin: 20px;
+    padding: 8px 30px;
+    cursor: pointer;
+    border: none;
+    color: black;
+    background-color: rgb(7, 144, 212);
+    border-radius: 5px;
+}
+
+
+.buttons button:disabled {
+    background-color: rgb(200, 194, 194);
+}
+
+.container::before {
+    content: '';
+    background-color: rgb(188, 190, 192);
+    position: absolute;
+    left: 0;
+    height: 4px;
+    top: 15%;
+    margin-left: 0px;
+    width: 100%;
+    z-index: -1; /* To make sure the line goes behind the circles.*/
+}
+
+.progress{
+    background-color: rgb(7, 144, 212);
+    position: absolute;
+    top: 15%;
+    left: 0;
+    height: 4px;
+    width: 0%;
+    margin-left: 0px;
+    z-index: -1; /* To make sure the line goes behind the circles.*/
+    transition: 0.4s ease;
+}
+
+.circle {
+    background-color: white;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgb(188, 190, 192);
+    transition: 0.4s ease;
+}
+
+.circle.active {
+    border-color: rgb(7, 144, 212);
+}
+
+
