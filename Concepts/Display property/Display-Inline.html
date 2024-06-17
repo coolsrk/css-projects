@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            width: 500px;
+            height: 500px;
+            background-color: yellow;
+            border: 1px solid black;
+        }
+
+        .first{
+            background-color: rosybrown;
+            border: 1px solid black;
+            margin: 30px;
+        }
+
+        .second{
+            background-color: lightblue;
+            border: 1px solid black;
+            padding: 30px;
+        }
+
+        .container1{
+            width: 500px;
+            height: 500px;
+            background-color: rgb(4, 0, 255);
+            border: 1px solid black;
+        }
+
+        /* .container1 div{
+            display: inline;
+        }
+
+        .first1{
+            background-color: rosybrown;
+            border: 1px solid black;
+            margin: 30px;
+        }
+
+        .second1{
+            background-color: lightblue;
+            border: 1px solid black;
+            padding: 5px;
+            margin: 30px;
+        } */
+
+        .box{
+            /* background-color: yellow; */
+            border: 1px solid rgb(140, 10, 10);
+        }
+        
+        .box span{
+            height: 50px;
+            width: 50px;
+            margin: 10px;
+            border: 1px solid greenyellow;
+        }
+
+        .container1 span{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    Inline elements are those elements that do not take up the full width available to them.
+    They do not start on a new line.
+    They only take up as much width as necessary.
+    Padding can be applied to inline elements but margin cannot.
+    Custom width and height cannot be applied to inline elements.
+    -->
+    <div class="container">
+        <span class="first">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa, aliquam. Itaque rem magni, laudantium repellendus delectus laborum autem sit doloribus corporis quisquam enim placeat. Maxime, dolorum nemo. Voluptas, ullam odit?
+        </span>
+        <span class="second">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, dignissimos ipsa laudantium quos debitis suscipit iusto rem ipsam inventore incidunt unde fuga nesciunt quis a magnam iste! Dolor, eos repellat?
+        </span>
+    </div>
+
+
+
+   <!-- 
+   What if I try to give multiple inline elements in the div which is
+   in the body but having custom width and height of 300px? 
+
+   Ans:- Custom width and height cannot be applied to inline elements.
+   Since box class does not have any width and height,
+    it will take full width from left to right since it is in body.
+    And span elements would start from left till end at right of the box.
+   -->
+
+   <div class="box">
+        <span>
+            Lorem, ipsum dolor 
+        </span>
+        <span>
+            Lorem, ipsum dolor 
+        </span>
+        <span>
+            Lorem, ipsum dolor 
+        </span>
+        <span>
+            Lorem, ipsum dolor 
+        </span>
+        <span>
+            Lorem, ipsum dolor 
+        </span>
+        <span>
+            Lorem, ipsum dolor 
+        </span>
+        <span>
+            Lorem, ipsum dolor 
+        </span>
+   </div>
+
+
+   <!-- 
+   If we give display: block; to the inline elements, 
+   they will be displayed as block-level elements. 
+   Custom width and height, margin and padding can be applied to block-level elements.
+    -->
+   <div class="container1">
+    <span class="first">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa, aliquam. Itaque rem magni, laudantium repellendus delectus laborum autem sit doloribus corporis quisquam enim placeat. Maxime, dolorum nemo. Voluptas, ullam odit?
+    </span>
+    <span class="second">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, dignissimos ipsa laudantium quos debitis suscipit iusto rem ipsam inventore incidunt unde fuga nesciunt quis a magnam iste! Dolor, eos repellat?
+    </span>
+   </div>
+</body>
+</html>

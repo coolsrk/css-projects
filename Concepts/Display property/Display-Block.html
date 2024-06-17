@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            width: 500px;
+            height: 500px;
+            background-color: yellow;
+            border: 1px solid black;
+        }
+
+        .first{
+            background-color: rosybrown;
+            border: 1px solid black;
+            margin: 30px;
+        }
+
+        .second{
+            background-color: lightblue;
+            border: 1px solid black;
+            padding: 30px;
+        }
+
+        .container1{
+            width: 500px;
+            height: 500px;
+            background-color: rgb(4, 0, 255);
+            border: 1px solid black;
+        }
+
+        .container1 div{
+            display: inline;
+        }
+
+        .first1{
+            background-color: rosybrown;
+            border: 1px solid black;
+            margin: 30px;
+        }
+
+        .second1{
+            background-color: lightblue;
+            border: 1px solid black;
+            padding: 5px;
+            margin: 30px;
+        }
+    </style>
+</head>
+<body>
+    <!--
+    There are some elements that are block-level by default.
+    Block-level elements are those elements that take up the full width available to them.
+    They start on a new line and take up the full width available to them.
+    Both padding and margin can be applied to block-level elements.
+    Custom width and height can be applied to block-level elements.
+    -->
+    <div class="container">
+        <div class="first">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa, aliquam. Itaque rem magni, laudantium repellendus delectus laborum autem sit doloribus corporis quisquam enim placeat. Maxime, dolorum nemo. Voluptas, ullam odit?
+        </div>
+        <div class="second">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ea, dignissimos ipsa laudantium quos debitis suscipit iusto rem ipsam inventore incidunt unde fuga nesciunt quis a magnam iste! Dolor, eos repellat?
+        </div>
+    </div>
+
+    <!-- 
+    If we apply display: inline; to the block-level elements, they will be displayed inline.
+    Inline elements do not take up the full width available to them.
+    So thats why the width and height properties are not applied to inline elements.
+    But margin and padding can be applied to inline elements, but only in left and right direction.
+    Top and bottom margin and padding will not be applied to inline elements.
+    -->
+    <div class="container1">
+        <div class="first1">
+            Lorem ipsum dolor sit 
+        </div>
+        <div class="second1">
+            Lorem, ipsum dolor sit amet consectetur 
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container1 {
+            width: 500px;
+            height: 500px;
+            background-color: rgb(48, 32, 141);
+            border: 1px solid black;
+            margin: 30px;
+            padding: 20px;
+        }
+
+        .container2 {
+            width: 500px;
+            height: 500px;
+            background-color: yellow;
+            border: 1px solid black;
+            box-sizing: border-box;
+            margin: 30px;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+    If we dont apply border-box: box-sizing property to the elements, 
+    Content size would be 500px, but margin, padding, and border 
+    would be added to the content size.
+    So total width would be 500px + 20px + 20px + 1px + 1px = 542px
+     -->
+    <div class="container1">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi esse neque non, adipisci repudiandae reiciendis numquam aut ullam porro recusandae a beatae excepturi maiores perspiciatis dignissimos odio? Dolorem, reprehenderit eius!
+    </div>
+
+    <!-- 
+    If we apply border-box: box-sizing property to the elements, 
+    Content size would be 500px, and margin, padding, and border
+    DO NOT get added to the content size.
+    Our box would not grow unlike above example, it would 
+    maintain the width of 500px and try to SHRINK the element.
+    -->
+
+    <div class="container2">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Commodi esse neque non, adipisci repudiandae reiciendis numquam aut ullam porro recusandae a beatae excepturi maiores perspiciatis dignissimos odio? Dolorem, reprehenderit eius!
+    </div>
+
+</body>
+</html>

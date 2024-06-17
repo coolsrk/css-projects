@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .container {
+            background-color: yellow;
+            border: 1px solid black;
+        }
+
+        .first{
+            background-color: rosybrown;
+            border: 1px solid black;
+            margin: 30px;
+        }
+
+        .second{
+            background-color: lightblue;
+            border: 1px solid black;
+            padding: 30px;
+        }
+
+        .container div {
+            display: inline-block;
+        }
+
+        /* .container1{
+            width: 500px;
+            height: 500px;
+            background-color: rgb(4, 0, 255);
+            border: 1px solid black;
+        }
+
+        .container1 div{
+            display: inline;
+        }
+
+        .first1{
+            background-color: rosybrown;
+            border: 1px solid black;
+            margin: 30px;
+        }
+
+        .second1{
+            background-color: lightblue;
+            border: 1px solid black;
+            padding: 5px;
+            margin: 30px;
+        } */
+    </style>
+</head>
+<body>
+    <!--
+    Lets say I want the elements to be in line and not below another
+    but still wants to apply padding and margin to them, 
+    custom height and width to them.
+    Is there any mixture of block and inline elements property?
+
+    Ans: Ye, we can use display: inline-block; property to achieve this.
+    Using this our elements will behave like inline elements
+    from outer side but custom properties like padding, margin, height, width can be applied to them.
+    -->
+    <div class="container">
+        <div class="first">
+            Lorem ipsum dolor sit amet  amet consectetur adipisicing e  amet cdipisicing e   
+        </div>
+        <div class="second">
+            Lorem, ipsum dolor sit amet consectetur adipisicing e
+        </div>
+    </div>
+</body>
+</html>
