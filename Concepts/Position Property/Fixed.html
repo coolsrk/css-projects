@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            border: 1px solid red;
+            margin-bottom: 200px;
+        }
+
+        img{
+            margin : 10px;
+        }
+
+        .class1 {
+
+        }
+
+        .class2 {
+            position: fixed; 
+            top: 100px; 
+        }
+
+        .class3 {
+            
+        }
+        
+        .container1 {
+            background-color: aquamarine;
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body style="height: 5000px;">
+
+    <div class="container">
+        <img class="class1" src="./Bali1.jpeg" alt="" height="300px" width="300px">
+        <img class="class1" src="./Bali1.jpeg" alt="" height="300px" width="300px">
+        <img class="class3" src="./Bali1.jpeg" alt="" height="300px" width="300px">
+    </div>
+
+    <!-- 
+       But in case of fixed positon, the element would remain fixed
+       at any point of the screen. It would not move with respect to the
+       parent container boundry. It would stick to the screen.
+    -->
+    <div class="container" style="height: 2000px;">
+        <img class="class1" src="./Bali1.jpeg" alt="" height="300px" width="300px">
+        <img class="class2" src="./Bali1.jpeg" alt="" height="300px" width="300px">
+        <img class="class3" src="./Bali1.jpeg" alt="" height="300px" width="300px">
+    </div>
+
+</body>
+</html>

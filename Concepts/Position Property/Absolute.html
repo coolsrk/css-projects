@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            border: 1px solid red;
+            margin-bottom: 200px;
+        }
+
+        img{
+            margin : 10px;
+        }
+
+        .class1 {
+
+        }
+
+        .class2 {
+            position: absolute;
+            top:100px;
+            left: 100px;    
+        }
+
+        .class3 {
+            
+        }
+        
+        .container1 {
+            background-color: aquamarine;
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- 
+    While working with position: absolute; property, observations are
+    1. Its always relative to the BODY or Current HTML Page
+    2. We can use top, bottom, left, right properties to position the element. But it
+    would shift the element with respect to the body/page.
+    3. Space initially assigned or occupied by that element would NOT GET RESERVED.
+    It would be consumed by another element.
+
+    Thats why whenever we want to do some overlapping, we use position: absolute; property.
+    Because original space would not get maintained.
+
+    -->
+    <div class="container">
+        <img class="class1" src="./Bali1.jpeg" alt="" height="300px" width="300px">
+        <img class="class1" src="./Bali1.jpeg" alt="" height="300px" width="300px">
+        <img class="class3" src="./Bali1.jpeg" alt="" height="300px" width="300px">
+    </div>
+
+
+    <!-- 
+        BEST Practice is , to assign position relative to the parent element, and 
+        then assign position absolute to the child element so the top, down, bottom, left
+        properties would be applied with respect to the Parent element and there would not
+        be any void space present for that element.
+    -->
+    <div class="container" style="position: relative;">
+        <img class="class1" src="./Bali1.jpeg" alt="" height="300px" width="300px">
+        <img class="class2" src="./Bali1.jpeg" alt="" height="300px" width="300px">
+        <img class="class3" src="./Bali1.jpeg" alt="" height="300px" width="300px">
+    </div>
+
+</body>
+</html>

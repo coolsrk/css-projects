@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            border: 1px solid red;
+            margin-bottom: 200px;
+        }
+
+        img{
+            margin : 10px;
+        }
+
+        .class1 {
+
+        }
+
+        .class2 {
+            position: sticky; 
+            top: 100px; 
+        }
+
+        .class3 {
+            
+        }
+        
+        .container1 {
+            background-color: aquamarine;
+            border: 1px solid black;
+        }
+
+    </style>
+</head>
+<body style="height: 5000px;">
+
+    <div class="container">
+        <img class="class1" src="./Bali1.jpeg" alt="" height="300px" width="300px">
+        <img class="class1" src="./Bali1.jpeg" alt="" height="300px" width="300px">
+        <img class="class3" src="./Bali1.jpeg" alt="" height="300px" width="300px">
+    </div>
+
+    <!-- 
+        When we do position sticky, the content would stick to the screen
+        with respect to the top, right, bottom, left properties we proided
+        but it would stick to the screen only till the parent container boundry.
+
+        Once the parent container boundry is reached, it would be no longer sticky. 
+        Top, right, bottom, left properties would be applied from page boundry. 
+    -->
+    <div class="container" style="height: 2000px;">
+        <img class="class1" src="./Bali1.jpeg" alt="" height="300px" width="300px">
+        <img class="class2" src="./Bali1.jpeg" alt="" height="300px" width="300px">
+        <img class="class3" src="./Bali1.jpeg" alt="" height="300px" width="300px">
+    </div>
+
+</body>
+</html>
