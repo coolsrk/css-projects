@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 50%;
+            font-size: 10px;
+            background-color: aquamarine;
+        }
+
+        .box {
+
+            /* Font size would be 
+            `parent font-size * 10`= 10px*10 = 100px 
+            */
+            font-size: 10em;
+            width: 50%;
+            background-color: chocolate;
+        }
+
+        .box2 {
+
+            /*
+            rem is relative to the root element
+            and for the root element the default font-size is 16px
+            so this would be 5*16 = 80px
+            */
+            font-size: 5rem;
+            width: 50%;
+            background-color: chocolate;
+        }
+
+        .child {
+            font-size: 4em;
+        }
+
+        .container2{
+            padding: 10%;
+            font-size: 10px;
+            background-color: rgb(215, 134, 67);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container2">
+        <div class="child">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate, laudantium?</p>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="box">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate, laudantium?</p>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <div class="box2">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptate, laudantium?</p>
+        </div>
+    </div>
+</body>
+</html>
