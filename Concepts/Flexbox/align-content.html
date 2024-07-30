@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <style>
+      body div {
+        margin: 20px;
+      }
+
+      .container {
+        background-color: #f7dd9d;
+        border: 4px solid black;
+        height: 500px;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .container {
+        align-items: start;
+        flex-wrap: wrap;
+
+        /*
+        In case of align-items, whenever we try to shrink the page
+        becase of wrap, items will move to next line but there will be 
+        a space between the items. To remove that space, we can use
+        align-content: start property.
+        */
+        align-content: start;
+      }
+
+      .container div {
+        width: 100px;
+        height: 100px;
+        margin: 1px;
+        padding: 2px;
+        border: 1px solid black;
+      }
+
+      .box1 {
+        background-color: red;
+      }
+
+      .box2 {
+        background-color: green;
+      }
+
+      .box3 {
+        background-color: blue;
+      }
+
+      .box4 {
+        background-color: yellow;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box1"></div>
+
+      <div class="box2"></div>
+
+      <div class="box3"></div>
+
+      <div class="box4"></div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
