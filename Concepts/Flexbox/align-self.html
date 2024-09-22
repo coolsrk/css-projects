@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <style>
+      body div {
+        margin: 20px;
+      }
+
+      .container {
+        background-color: #f7dd9d;
+        border: 4px solid black;
+        height: 500px;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .container {
+        align-items: start;
+        align-content: start;
+      }
+
+      .container div {
+        width: 100px;
+        height: 100px;
+        margin: 1px;
+        padding: 2px;
+        border: 1px solid black;
+      }
+
+      .box1 {
+        background-color: red;
+        order: 100;
+        /* This will place items in the flex with respect to CROSS Axis*/
+        /* This will place the box1 in the center of the cross axis */
+        align-self: center;
+      }
+
+      .box2 {
+        background-color: green;
+      }
+
+      .box3 {
+        background-color: blue;
+        order: -1;
+        align-self: flex-end;
+      }
+
+      .box4 {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box1">Box1</div>
+
+      <div class="box2">Box2</div>
+
+      <div class="box3">Box3</div>
+
+      <div class="box4">Box4</div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

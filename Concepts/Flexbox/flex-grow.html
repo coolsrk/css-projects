@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox</title>
+    <style>
+      body div {
+        margin: 20px;
+      }
+
+      .container {
+        background-color: #f7dd9d;
+        border: 4px solid black;
+        height: 500px;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: row;
+      }
+
+      .container {
+        align-items: start;
+        align-content: start;
+      }
+
+      .container div {
+        width: 100px;
+        height: 100px;
+        margin: 1px;
+        padding: 2px;
+        border: 1px solid black;
+      }
+
+      .box1 {
+        background-color: red;
+        order: 100;
+        /* This will grow the box1 to 4 times the available space */
+        /* Also it increases the speed of growing*/
+        flex-grow: 4;
+      }
+
+      .box2 {
+        background-color: green;
+        flex-grow: 1;
+      }
+
+      .box3 {
+        background-color: blue;
+        /* This will move the box3 to the first position */
+        order: -1;
+        flex-grow: 1;
+      }
+
+      .box4 {
+        background-color: yellow;
+        flex-grow: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box1">Box1</div>
+
+      <div class="box2">Box2</div>
+
+      <div class="box3">Box3</div>
+
+      <div class="box4">Box4</div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
