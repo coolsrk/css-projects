@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Box Shadow</title>
+    <style>
+      body div {
+        margin: 20px;
+      }
+
+      .container {
+        background-color: #f7dd9d;
+        border: 4px solid black;
+        height: 100vh;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .container {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .container div {
+        width: 100px;
+        height: 100px;
+        margin: 1px;
+        padding: 2px;
+        border: 1px solid black;
+      }
+
+      .box1 {
+        background-color: red;
+        order: 100;
+        /* X-dir Y-dir color*/
+        box-shadow: inset 10px 10px grey;
+      }
+
+      .box2 {
+        background-color: green;
+        box-shadow: inset 10px -10px rgb(111, 109, 109);
+      }
+
+      .box3 {
+        background-color: blue;
+        /* This will move the box3 to the first position */
+        order: -1;
+        box-shadow: inset -10px 10px rgb(104, 100, 100);
+      }
+
+      .box4 {
+        background-color: yellow;
+        box-shadow: inset -10px -10px rgb(113, 111, 111);
+      }
+
+      .box5 {
+        background-color: rgb(29, 169, 235);
+        /* X-dir Y-dir Blur-Index Color*/
+        box-shadow: 10px 10px 5px rgb(113, 111, 111);
+        align-self: flex-start;
+      }
+
+      .box6 {
+        background-color: rgb(217, 48, 206);
+        /* X-dir Y-dir Blur-Index Spread-Index Color*/
+        box-shadow: 10px 10px 5px 20px rgb(113, 111, 111);
+        align-self: flex-end;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box1">Box1</div>
+
+      <div class="box2">Box2</div>
+
+      <div class="box3">Box3</div>
+
+      <div class="box4">Box4</div>
+
+      <div class="box5">Box5</div>
+      
+      <div class="box6">Box5</div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
