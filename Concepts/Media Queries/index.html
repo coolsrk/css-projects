@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries</title>
+    <style>
+      .container {
+        width: 400px;
+        height: 400px;
+        background-color: red;
+        border: 2px solid black;
+      }
+
+      @media (min-width: 500px) and (max-width: 1000px) {
+        .container {
+          background-color: green;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"></div>
+  </body>
+</html>
