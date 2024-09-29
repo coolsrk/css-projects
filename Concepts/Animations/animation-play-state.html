@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animations</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        width: 100vw;
+        height: 100vh;
+        background-color: beige;
+        border: 5px solid black;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: relative;
+        margin: 10px;
+        padding: 10px;
+
+        /* Animation must have name*/
+        animation-name: move-right;
+        /* For how much time it should run*/
+        animation-duration: 4s;
+        /* How many times it should run*/
+        animation-iteration-count: 1;
+        /* How much delay it should take to start the animation*/
+        animation-delay: 2s;
+      }
+
+      #id1 {
+        animation-play-state: running;
+      }
+
+      #id2 {
+        animation-play-state: paused;
+      }
+
+      @keyframes move-right {
+        from {
+          left: 0;
+          right: 0;
+        }
+
+        to {
+          left: 50%;
+          right: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box" id="id1">running</div>
+
+      <div class="box" id="id2">paused</div>
+
+    </div>
+  </body>
+</html>

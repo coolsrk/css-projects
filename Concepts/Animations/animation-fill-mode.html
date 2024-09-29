@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Animations</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      .container {
+        width: 100vw;
+        height: 100vh;
+        background-color: beige;
+        border: 5px solid black;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        position: relative;
+        margin: 10px;
+        padding: 10px;
+
+        /* Animation must have name*/
+        animation-name: move-right;
+        /* For how much time it should run*/
+        animation-duration: 4s;
+        /* How many times it should run*/
+        animation-iteration-count: 1;
+        /* How much delay it should take to start the animation*/
+        animation-delay: 2s;
+      }
+
+      #id1 {
+        /* Fill mode would tell that after or before the animation 
+            what should be the state of the element 
+            Here forward means after the animation the
+             element should stay at the last position
+        */
+        animation-fill-mode: forwards;
+      }
+
+      #id2 {
+        /* Here backwards means after the animation the 
+            element should stay at the first position where 
+            it started.
+        */
+        animation-fill-mode: backwards;
+      }
+
+      #id3 {
+        /* 
+            */
+        animation-fill-mode: both;
+      }
+
+      @keyframes move-right {
+        from {
+          left: 0;
+          right: 0;
+        }
+
+        to {
+          left: 50%;
+          right: 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box" id="id1">forwards</div>
+
+      <div class="box" id="id2">backwards</div>
+
+      <div class="box" id="id3">both</div>
+    </div>
+  </body>
+</html>
