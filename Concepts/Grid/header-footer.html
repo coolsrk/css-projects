@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .container {
+        height: 100%;
+        width: 100%;
+        background-color: rgb(192, 135, 245);
+        display: grid;
+        padding: 4em;
+        gap: 1rem;
+
+        /* will divide structure in 2 rows and 3 columns*/
+        /* fr aka fraction is nothing but the part of the div*/
+        /* lets say total width is 3000px and I want 3 columns with first */
+        /* column of width 2fr then 2fr + 1fr + 1fr = 3000px */
+        /* fr = 3000/4 => 750px. So first box would be of 2fr = 2*750 px*/
+        grid-template-rows: repeat(6, 1fr);
+
+        /* To repeat the same fraction multiple times, use repeat()*/
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .item {
+        background-color: aquamarine;
+        border: 2px solid black;
+        padding: 10px;
+      }
+
+      .item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        font-size: 2rem;
+      }
+
+      @media (min-width: 700px) {
+        .container {
+          grid-template-rows: repeat(4, 1fr);
+          grid-template-columns: repeat(1, 1fr);
+        }
+
+        .header,
+        .footer {
+          grid-column: 1 / 4;
+        }
+
+        .sidebar {
+          grid-row: 2 / 4;
+        }
+
+        .content1 {
+          grid-column: 2 / 4;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item header" id="item1">Header</div>
+      <div class="item sidebar" id="item2">Sidebar</div>
+      <div class="item content1" id="item3">Content1</div>
+      <div class="item content2" id="item4">Content2</div>
+      <div class="item content3" id="item5">Content3</div>
+      <div class="item footer" id="item6">Footer</div>
+    </div>
+  </body>
+</html>

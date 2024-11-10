@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        height: 100vh;
+        width: 100vw;
+      }
+
+      .container {
+        height: 100%;
+        width: 100%;
+        background-color: rgb(192, 135, 245);
+        display: grid;
+        padding: 4em;
+        gap: 1rem;
+
+        /* will divide structure in 2 rows and 3 columns*/
+        /* fr aka fraction is nothing but the part of the div*/
+        /* lets say total width is 3000px and I want 3 columns with first */
+        /* column of width 2fr then 2fr + 1fr + 1fr = 3000px */
+        /* fr = 3000/4 => 750px. So first box would be of 2fr = 2*750 px*/
+        grid-template-rows: 1fr 1fr 1fr; 
+
+        /* To repeat the same fraction multiple times, use repeat()*/
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .item {
+        background-color: aquamarine;
+        border: 2px solid black;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center; 
+        font-size: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item" id="item1">item1</div>
+      <div class="item" id="item2">item2</div>
+      <div class="item" id="item3">item3</div>
+      <div class="item" id="item4">item4</div>
+      <div class="item" id="item5">item5</div>
+      <div class="item" id="item6">item6</div>
+    </div>
+  </body>
+</html>
