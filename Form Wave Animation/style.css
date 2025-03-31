@@ -1,0 +1,102 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: steelblue;
+}
+
+.input-container label{
+    display: block;
+}
+
+.container {
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 2rem 4rem;
+    border-radius: 1rem;
+    color: white;
+}
+
+.container h1 {
+    color: white;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.container a {
+    text-decoration: none;
+    color: lightblue
+}
+
+.container input {
+    background-color: transparent;
+    width: 100%;
+    border: 0;
+    border-bottom: .10rem solid white;
+}
+
+.container input {
+    outline: none;
+    color: white;
+}
+
+.container .btn {
+    width: 100%;
+    padding: .70rem 0;
+    border: 0;
+    border-radius: 10px;
+    background-color: lightblue;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn:active {
+    transform: scale(.98);
+}
+
+.container p {
+    margin-top: 1.5rem;
+}
+
+.container *{
+    margin: .50rem 0px
+}
+
+.input-container {
+    position: relative;
+    margin: 1rem 0;
+    padding: 2rem 0;
+}
+
+.input-container label {
+    position: absolute;
+    top: 10px;
+}
+
+/**
+This + means label is immediately after input
+*/
+
+.input-container input:focus + label span {
+    color: rgb(126, 200, 224);
+    transform: translateY(-20px);
+}
+
+.input-container input:focus {
+    border-bottom-color:rgb(126, 200, 224);
+}
+
+.input-container label span {
+    /*
+    To keep spans in the same line, we need to set display to inline
+    to set any width size to the span, we need to set display to block
+    so in combination we set display to inline-block
+    */
+    display: inline-block;
+    transition: cubic-bezier(0.47, -0.25, 0.23, 0.86) .2s;
+}
