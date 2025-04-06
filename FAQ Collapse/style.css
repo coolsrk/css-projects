@@ -1,0 +1,88 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: rgb(225, 219, 219);
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.container {
+  margin: 2rem;
+  width: 50%;
+}
+
+.container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.faq {
+  margin: 1rem;
+  cursor: pointer;
+  border: 0.5px solid rgb(155, 151, 151);
+  padding: 10px 30px;
+  border-radius: 10px;
+  height: auto;
+  position: relative;
+  overflow: hidden;
+}
+
+.faq:hover {
+  box-shadow: 0px 0px 10px rgb(155, 151, 151);
+  transition: 0.1s ease-in;
+}
+
+.faq-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.faq div {
+  margin: 20px;
+}
+
+i {
+  font-size: 1rem;
+}
+
+
+/**
+ To use comments icons, both opposite to each, one slightly above and one slightly below,
+ We need to use the font awesome icon with Unicodes.
+ We gotta so it with ::after and ::before pseudo elements.
+*/
+
+.faq.active::before,
+.faq.active::after
+{
+    content: '\f075'; /*gotta give escape char before using it*/
+    font-family: "Font Awesome 5 Free"; /* gotta give the font family */
+    font-size: 7rem;
+    color: rgb(133, 142, 244);
+    position: absolute;
+    top: 10px;
+    left: 20px;
+    opacity: 0.3;
+    z-index: -1;
+}
+
+/*
+    Since one icon is rotated by Y axis and below the other one, 
+    we need to use transform property.
+*/
+.faq.active::before {
+    top: -10px;
+    left: -20px;
+    color: rgb(47, 219, 105);
+    transform: rotateY(180deg);
+}
