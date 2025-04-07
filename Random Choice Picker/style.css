@@ -1,0 +1,45 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(82, 82, 238);
+    color: white;
+}
+
+textarea {
+    width: 30rem;
+    height: 5rem;
+    resize: none;
+    margin-bottom: 10px;
+}
+
+.container p {
+    text-align: center;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+}
+
+#tag {
+    background-color: rgb(246, 94, 39);
+    padding: 5px 8px;
+    border-radius: 20px;
+}
+
+#tags {
+    display: flex;
+    flex-direction: row;
+    width: 30rem;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
